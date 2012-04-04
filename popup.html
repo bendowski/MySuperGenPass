@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html manifest="cache.manifest">
+
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+
+    <script src="jquery-1.7.2.min.js"></script>
+    <script src="selectTextPlugin.js"></script>
+    <script src="supergenpass.js"></script>
+    <script src="popup.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="popup.css" />                
+
+    <title>SuperGenPass</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>SuperGenPass</h1>
+    </header>
+
+    <section>
+      <form>
+
+	<fieldset id="PasswdField" class="First">
+	  <label id="PasswdLabel" for="Passwd">Master password</label>
+	  <div class="Field">
+	    <input id="Passwd" name="Passwd" type="password" autofocus="autofocus">
+	  </div>
+	</fieldset>
+
+	<fieldset id="DomainField">
+	  <label id="DomainLabel" for="Domain">Domain / URL</label>
+	  <div class="Field">
+	    <input id="Domain" name="Domain" autocorrect="off" autocapitalize="off">
+	  </div>
+	</fieldset>
+        
+	<fieldset id="TLDField">
+	  <label id="TLDLabel" for="DisableTLD">Disable subdomain removal</label>
+	  <input id="DisableTLD" name="DisableTLD" type="checkbox" >
+	</fieldset>
+
+	<fieldset id="LenField" class="Last">
+	  <label id="LenLabel" for="Len">Password length</label>
+	  <div class="Field">
+	    <input id="Len" name="Len" type="number" min="4" max="24" value="10">
+	  </div>
+	</fieldset>
+
+	<div id="Generate">
+	  <a href="#" id="GenerateLabel">Generate</a>
+	</div>
+
+	<div id="Result">&#160;</div>
+        <input type="submit" style="visibility: hidden;" />
+      </form>
+
+    </section>
+  </body>
+
+</html>
