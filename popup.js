@@ -4,7 +4,7 @@ $(document).ready(function() {
   result = $('#Result');
   generate = function() {
     SGPLocal();
-    if (!result.is(':hidden')) result.selectText();
+    if (result.css('display') !== 'none') result.selectText();
     return false;
   };
   $('#GenerateLabel').click(generate);

@@ -2,7 +2,7 @@ $(document).ready () ->
   result = $('#Result')
   generate = ->
     SGPLocal()
-    result.selectText() unless result.is ':hidden'
+    result.selectText() unless result.css('display') is 'none'
     false
 
   $('#GenerateLabel').click generate
